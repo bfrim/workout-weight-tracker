@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 10px; */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.workout {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+h2 {
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.exercise {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-top: 1px solid white;
+    border-bottom: 1px solid white; */
+    padding: 0 0.6rem 0 0.6rem
+}
+.exercise1 {
+    background-color: #272727;
+}
+.exercise-details {
+    display: flex; align-items: center;
+}
+.exercise input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+.exercise span {
+    margin-right: 10px;
+}
+
+.weight-controls {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    /* margin: 0 5px; */
+    /* padding: 5px 10px; */
+    height: 2.5rem;
+    width: 2rem;
+    background-color: transparent;
+    color: #e0e0e0;
+    border: none;
+    /* border-radius: 3px; */
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    min-width: 17px;
+    min-height: 17px;
+    background-color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    /* margin-right: 0.5rem; */
+}
+input[type="checkbox"]:checked {
+  background-color: #0077ff;
+}
+
+input[type="number"] {
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    background-color: transparent;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 0px;
+}
+
+h1, h2 {
+    color: #ffffff;
+}
+
+#addExercise { margin-top: 10px; }

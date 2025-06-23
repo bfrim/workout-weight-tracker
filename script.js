@@ -2,7 +2,6 @@ function adjustWeight(exercise, change) {
     let weight = parseFloat(document.getElementById(`${exercise}Weight`).value) + change;
     if (weight >= 0) {
         document.getElementById(`${exercise}Weight`).value = weight;
-        navigator.vibrate(50);
     }
     else { weight = 0; }
     localStorage.setItem(`${exercise}Weight`, weight);
@@ -35,11 +34,5 @@ window.onload = function() {
                 element.value = localStorage.getItem(exercise.id) || 0;
             }
         }
-    });
-
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            navigator.vibrate(30);
-        });
     });
 }

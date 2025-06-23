@@ -6,154 +6,18 @@
     <title>My Workout Weight Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://kit.fontawesome.com/c2d4762e24.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- <h1>Workout Tracker</h1> -->
-    <div class="workout" id="workoutA">
-        <h2>Workout A</h2>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="squatsCheck"> <span>Squats (3x6-8)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('squats', -5)">-</button>
-                <input type="number" id="squatsWeight" value="20">
-                <button onclick="adjustWeight('squats', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise exercise1">
-            <div class="exercise-details">
-                <input type="checkbox" id="benchCheck"> <span>Bench Press (3x4-6)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('bench', -5)">-</button>
-                <input type="number" id="benchWeight" value="10">
-                <button onclick="adjustWeight('bench', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="latCheck"> <span>Lat Pulldowns (3x6-8)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('lat', -5)">-</button>
-                <input type="number" id="latWeight" value="30">
-                <button onclick="adjustWeight('lat', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise exercise1">
-            <div class="exercise-details">
-                <input type="checkbox" id="shoulderCheck"> <span>Shoulder Press (3x6-8)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('shoulder', -5)">-</button>
-                <input type="number" id="shoulderWeight" value="12">
-                <button onclick="adjustWeight('shoulder', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="lateralCheck"> <span>Lateral Raises (3x10-12)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('lateral', -2.5)">-</button>
-                <input type="number" id="lateralWeight" value="5">
-                <button onclick="adjustWeight('lateral', 2.5)">+</button>
-            </div>
-        </div>
-        <div class="exercise exercise1">
-            <div class="exercise-details">
-                <input type="checkbox" id="chestFlyCheck"> <span>Cable Chest Fly (3x10-12)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('chestFly', -2.5)">-</button>
-                <input type="number" id="chestFlyWeight" value="5">
-                <button onclick="adjustWeight('chestFly', 2.5)">+</button>
-            </div>
-        </div>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="facePullsCheck"> <span>Face Pulls (3x10-12)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('facePulls', -1)">-</button>
-                <input type="number" id="facePullsWeight" value="3">
-                <button onclick="adjustWeight('facePulls', 1)">+</button>
-            </div>
-        </div>
+    <h1>Workout Tracker</h1>
+    
+    <div class="hero">
+        <a href="a.html"><button>Workout A</button></a>
+        <a href="b.html"><button>Workout B</button></a>
     </div>
-    <div class="workout" id="workoutB">
-        <h2>Workout B</h2>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="deadliftCheck"> <span>Deadlift (3x6-8)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('deadlift', -5)">-</button>
-                <input type="number" id="deadliftWeight" value="20">
-                <button onclick="adjustWeight('deadlift', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise exercise1">
-            <div class="exercise-details">
-                <input type="checkbox" id="rowCheck"> <span>Seated Cable Row (3x8-10)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('row', -5)">-</button>
-                <input type="number" id="rowWeight" value="0">
-                <button onclick="adjustWeight('row', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="inclineCheck"> <span>Incline Dumbbell Press (3x6-8)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('incline', -5)">-</button>
-                <input type="number" id="inclineWeight" value="0">
-                <button onclick="adjustWeight('incline', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise exercise1">
-            <div class="exercise-details">
-                <input type="checkbox" id="legPressCheck"> <span>Leg Press (3x8-10)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('legPress', -10)">-</button>
-                <input type="number" id="legPressWeight" value="150">
-                <button onclick="adjustWeight('legPress', 10)">+</button>
-            </div>
-        </div>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="legCurlsCheck"> <span>Leg Curls (3x10-12)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('legCurls', -5)">-</button>
-                <input type="number" id="legCurlsWeight" value="0">
-                <button onclick="adjustWeight('legCurls', 5)">+</button>
-            </div>
-        </div>
-        <div class="exercise exercise1">
-            <div class="exercise-details">
-                <input type="checkbox" id="tricepsCheck"> <span>Triceps Pushdowns (3x10-12)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('triceps', -1)">-</button>
-                <input type="number" id="tricepsWeight" value="4">
-                <button onclick="adjustWeight('triceps', 1)">+</button>
-            </div>
-        </div>
-        <div class="exercise">
-            <div class="exercise-details">
-                <input type="checkbox" id="bicepsCheck"> <span>Biceps Curls (3x10-12)</span>
-            </div>
-            <div class="weight-controls">
-                <button onclick="adjustWeight('biceps', -2.5)">-</button>
-                <input type="number" id="bicepsWeight" value="0">
-                <button onclick="adjustWeight('biceps', 2.5)">+</button>
-            </div>
-        </div>
+
+    <div class="graphic">
+        <i class="fa-solid fa-dumbbell"></i>
     </div>
 
     <script src="script.js"></script>

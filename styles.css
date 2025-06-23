@@ -15,9 +15,53 @@ body {
 }
 
 h1 {
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 1 0.5rem 0 0.5rem;
     padding: 1rem;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+a button {
+    background-color: rgb(22, 22, 22);
+    height: 3rem;
+    width: 10rem;
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 5px;
+    font-size: 1rem;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.back {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.hero {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.graphic {
+    height: 20rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-dumbbell {
+    font-size: 5rem;
 }
 
 h2 {
@@ -25,23 +69,26 @@ h2 {
 }
 
 .exercise {
-    min-height: 2.5rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* border-top: 1px solid white;
     border-bottom: 1px solid white; */
-    padding: 0 0.6rem 0 0.6rem
+    padding: 0 0.6rem 0 0.6rem;
+
 }
 .exercise1 {
     background-color: #272727;
+    box-shadow: none;
 }
 .exercise-details {
-    display: flex; align-items: center;
+    display: flex; 
+    align-items: center;
 }
 .exercise input[type="checkbox"] {
     margin-right: 10px;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 .exercise span {
     margin-right: 10px;
@@ -57,15 +104,18 @@ h2 {
 button {
     /* margin: 0 5px; */
     /* padding: 5px 10px; */
-    height: 2.5rem;
+    height: 2rem;
     width: 2rem;
     background-color: transparent;
     color: #e0e0e0;
+    /* background-color: #111111; */
     border: none;
-    /* border-radius: 3px; */
+    border-radius: 100px;
+    text-align: center;
     cursor: pointer;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+    font-size: 1rem;
 }
 
 input[type="checkbox"] {
@@ -79,7 +129,30 @@ input[type="checkbox"] {
     /* margin-right: 0.5rem; */
 }
 input[type="checkbox"]:checked {
-  background-color: #0077ff;
+    /* background-color: #db3030; */
+    outline: 7px solid black;
+    transform: scale(0.8);
+}
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(81, 255, 0);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    animation: tick 0.2s ease forwards;
+}
+
+@keyframes tick {
+    0% { 
+        transform: rotate(45deg) scale(0);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
 }
 
 input[type="number"] {
@@ -88,6 +161,7 @@ input[type="number"] {
     text-align: center;
     background-color: transparent;
     color: #e0e0e0;
+    font-size: 1.3rem;
     border: none;
     border-radius: 0px;
 }
@@ -96,4 +170,6 @@ h1, h2 {
     color: #ffffff;
 }
 
-#addExercise { margin-top: 10px; }
+#addExercise {
+    margin-top: 10px;
+}

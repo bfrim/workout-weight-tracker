@@ -1,22 +1,36 @@
 function adjustWeight(exercise, change) {
     let weight = parseFloat(document.getElementById(`${exercise}Weight`).value) + change;
-    if (weight >= 0) document.getElementById(`${exercise}Weight`).value = weight;
+    if (weight >= 0) { document.getElementById(`${exercise}Weight`).value = weight; }
+    else { weight = 0; }
     localStorage.setItem(`${exercise}Weight`, weight);
 }
 
 window.onload = function() {
-    document.getElementById('squatsWeight').value = localStorage.getItem('squatsWeight') || 0;
-    document.getElementById('benchWeight').value = localStorage.getItem('benchWeight') || 0;
-    document.getElementById('latWeight').value = localStorage.getItem('latWeight') || 0;
-    document.getElementById('shoulderWeight').value = localStorage.getItem('shoulderWeight') || 0;
-    document.getElementById('lateralWeight').value = localStorage.getItem('lateralWeight') || 0;
-    document.getElementById('chestFlyWeight').value = localStorage.getItem('chestFlyWeight') || 0;
-    document.getElementById('facePullsWeight').value = localStorage.getItem('facePullsWeight') || 0;
-    document.getElementById('deadliftWeight').value = localStorage.getItem('deadliftWeight') || 0;
-    document.getElementById('rowWeight').value = localStorage.getItem('rowWeight') || 0;
-    document.getElementById('inclineWeight').value = localStorage.getItem('inclineWeight') || 0;
-    document.getElementById('legPressWeight').value = localStorage.getItem('legPressWeight') || 0;
-    document.getElementById('legCurlsWeight').value = localStorage.getItem('legCurlsWeight') || 0;
-    document.getElementById('tricepsWeight').value = localStorage.getItem('tricepsWeight') || 0;
-    document.getElementById('bicepsWeight').value = localStorage.getItem('bicepsWeight') || 0;
+    const exercises = [
+        { id: 'squatsWeight', page: 'a.html' },
+        { id: 'benchWeight', page: 'a.html' },
+        { id: 'latWeight', page: 'a.html' },
+        { id: 'shoulderWeight', page: 'a.html' },
+        { id: 'lateralWeight', page: 'a.html' },
+        { id: 'chestFlyWeight', page: 'a.html' },
+        { id: 'facePullsWeight', page: 'a.html' },
+        { id: 'deadliftWeight', page: 'b.html' },
+        { id: 'rowWeight', page: 'b.html' },
+        { id: 'inclineWeight', page: 'b.html' },
+        { id: 'legPressWeight', page: 'b.html' },
+        { id: 'legCurlsWeight', page: 'b.html' },
+        { id: 'tricepsWeight', page: 'b.html' },
+        { id: 'bicepsWeight', page: 'b.html' }
+    ];
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    exercises.forEach(exercise => {
+        if (currentPage === exercise.page || currentPage === 'index.html') {
+            const element = document.getElementById(exercise.id);
+            if (element) {
+                element.value = localStorage.getItem(exercise.id) || 0;
+            }
+        }
+    });
 }
